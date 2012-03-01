@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title><%= content_for?(:title) ? content_for(:title) : "Railscasts" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div class="layout_time">Layout random: <strong><%= rand(900)+100 %></strong></div>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      
+      <%= yield %>
+      
+    </div>
+  </body>
+</html>
