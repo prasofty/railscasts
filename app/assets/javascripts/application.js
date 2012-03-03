@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(document).ready(function () {
-	console.log('aa');
+	console.log('test 2');
 });
 
 
