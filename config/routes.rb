@@ -1,18 +1,4 @@
 Railscasts::Application.routes.draw do
-
-  resources :fonts
-
-  resource :javascripts do
-    collection do
-      get 'loading_dots'
-    end
-  end
-
-  match "home/index" => "home#index"
-  root :to => "home#index"
-
-  match ':controller(/:action(/:id))(.:format)'
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
